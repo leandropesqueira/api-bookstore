@@ -50,4 +50,9 @@ public class LivroService {
 		obj.setCategoria(cat);
 		return livroReporitory.save(obj);
 	}
+
+	public void delete(Long id) {
+		Livro obj = findById(id);
+		livroReporitory.delete(obj);		
+	}
 }
